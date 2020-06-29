@@ -1,12 +1,12 @@
 {
   "name": "query-string-umd",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "query-string-umd",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build2": "webpack --config webpack.config.prod.js",
-    "build": "rollup --config rollup.config.prod.js"
+    "build": "webpack --config webpack.config.prod.js",
+    "build2": "rollup --config rollup.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -19,16 +19,17 @@
   },
   "homepage": "https://github.com/Ashley2014/query-string-umd#readme",
   "devDependencies": {
+    "@rollup/plugin-babel": "^5.0.4",
     "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.6",
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.1.0",
     "babel-loader": "^8.1.0",
     "query-string": "^6.12.1",
-    "rollup": "^2.0.2",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-terser": "^5.2.0",
+    "rollup": "^2.18.1",
+    "rollup-plugin-terser": "^6.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "dependencies": {}
 }

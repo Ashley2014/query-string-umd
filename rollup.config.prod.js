@@ -1,5 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import {terser} from 'rollup-plugin-terser';
 import commonjs from '@rollup/plugin-commonjs';
 
@@ -18,9 +18,10 @@ function generateConfig(format) {
     output: output,
     plugins: [
       resolve({
-        // customResolveOptions: {
-        //   moduleDirectory: 'node_modules'
-        // }
+        customResolveOptions: {
+          moduleDirectory: 'node_modules'
+        },
+        mainFields:['browser', 'main', 'module']
       }),
       commonjs(),
       babel({

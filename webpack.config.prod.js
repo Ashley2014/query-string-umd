@@ -2,10 +2,15 @@ const path = require('path');
 module.exports = {
     mode: 'production',
     entry: './src/index.js',
+    resolve: {
+      mainFields: ['browser', 'module', 'main']
+    },
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
+        library: 'queryString',
+        libraryTarget: 'umd',
     },
     module: {
         rules: [
